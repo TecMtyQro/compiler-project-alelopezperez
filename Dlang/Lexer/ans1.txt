@@ -1,0 +1,43 @@
+
+
+
+
+<id, vector><<><int><>><id, asteroidCollision><(><id, vector><<><int><>><&><id, asteroids><)><{>
+<id, stack><<><int><>><id, st><;>
+
+<for><(><int><id, i><=><integer, 0><;><id, i><<><id, asteroids><.><id, size><(><)><;><id, i><++><)><{>
+<if><(><id, st><.><id, empty><(><)><)><{>
+<id, st><.><id, push><(><id, asteroids><[><id, i><]><)><;>
+<}>
+<else><if><(><id, st><.><id, top><(><)><>><integer, 0><&&><id, asteroids><[><id, i><]><>><integer, 0><||><id, st><.><id, top><(><)><<><integer, 0><&&><id, asteroids><[><id, i><]><<><integer, 0><||><id, st><.><id, top><(><)><<><integer, 0><&&><id, asteroids><[><id, i><]><>><integer, 0><)><{>
+<id, st><.><id, push><(><id, asteroids><[><id, i><]><)><;>
+
+<}>
+
+<else><{>
+
+<while><(><!><id, st><.><id, empty><(><)><&&><id, abs><(><id, asteroids><[><id, i><]><)><>><id, abs><(><id, st><.><id, top><(><)><)><&&><id, st><.><id, top><(><)><>><integer, 0><&&><id, asteroids><[><id, i><]><<><integer, 0><)><{>
+<id, st><.><id, pop><(><)><;>
+<}>
+
+<if><(><id, st><.><id, empty><(><)><||><id, st><.><id, top><(><)><<><integer, 0><)><{>
+<id, st><.><id, push><(><id, asteroids><[><id, i><]><)><;>
+<}>
+<else><if><(><id, abs><(><id, asteroids><[><id, i><]><)><==><id, abs><(><id, st><.><id, top><(><)><)><&&><id, st><.><id, top><(><)><>><integer, 0><&&><id, asteroids><[><id, i><]><<><integer, 0><)><{>
+<id, st><.><id, pop><(><)><;>
+
+<}>
+
+<}>
+<}>
+
+<id, vector><<><int><>><id, ans><(><id, st><.><id, size><(><)><)><;>
+<int><id, size><=><id, st><.><id, size><(><)><-><integer, 1><;>
+<for><(><int><id, i><=><id, size><;><id, i><>=><integer, 0><;><id, i><--><)><{>
+<id, ans><[><id, i><]><=><id, st><.><id, top><(><)><;>
+<id, st><.><id, pop><(><)><;>
+<}>
+ ERROR on Line 40  ERROR on Line 40 <;>
+<return><id, ans><;>
+
+<}>
