@@ -1,0 +1,27 @@
+<import><id, std><.><id, stdio><;>
+
+<int><id, main><(><)><{>
+
+<int><id, a><=><integer, 100><;>
+
+
+<if><(><id, a><<><integer, 20><)><{>
+
+<id, writefln><(><string literal, "a is less than 20"><)><;>
+<}>
+<else><{>
+
+<id, writefln><(><string literal, "a is not less than 20"><)><;>
+<}>
+<for><(><int><id, i><=><integer, 0><;><id, i><<><id, a><;><id, i><++><)><{>
+<if><(><id, i><<><integer, 20><)><{>
+
+<id, writefln><(><string literal, "a is less than 20"><)><;>
+<}>
+
+<}>
+<id, writefln><(><string literal, "value of a is : %d"><,><id, a><)><;>
+<id, writefln><(><string literal, "value of a is : %d"><,><id, a><)><;>
+
+<return><integer, 0><;>
+<}>
